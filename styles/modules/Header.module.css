@@ -1,0 +1,20 @@
+.header {
+  background-color: var(--clr-white);
+  border-bottom: var(--border);
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

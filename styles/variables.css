@@ -6,6 +6,9 @@
   --clr-gray: #374151;
   --clr-gray-dark: #1f2937;
 
+  /* border */
+  --border: 2px solid var(--clr-black);
+
   /* border-radius */
   --br: 0.5rem;
 }

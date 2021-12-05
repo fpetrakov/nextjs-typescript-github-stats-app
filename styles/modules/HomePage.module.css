@@ -13,7 +13,7 @@
 }
 
 .input {
-  border: 2px solid var(--clr-black);
+  border: var(--border);
   border-radius: var(--br);
   padding: 1rem;
   line-height: 2rem;
@@ -21,6 +21,7 @@
   box-shadow: 4px 4px 0px 0px var(--clr-black);
   transition: all 200ms ease-out;
   font-weight: 500;
+  width: 100%;
 }
 
 .input:focus {

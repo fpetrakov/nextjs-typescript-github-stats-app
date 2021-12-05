@@ -22,7 +22,7 @@ const HomePage: FC = () => {
   };
 
   return (
-    <Container>
+    <Container mw={380}>
       <main className={styles.main}>
         <Head>
           <title>Home</title>
