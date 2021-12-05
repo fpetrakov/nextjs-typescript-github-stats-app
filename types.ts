@@ -1,11 +1,11 @@
 export interface UserType {
-  login: string | null;
-  id: number | null;
-  node_id: string | null;
-  avatar_url: string | null;
+  login: string;
+  id: number;
+  node_id: string;
+  avatar_url: string;
   gravatar_id: string | null;
   url: string | null;
-  html_url: string | null;
+  html_url: string;
   followers_url: string | null;
   following_url: string | null;
   gists_url: string | null;
@@ -19,16 +19,16 @@ export interface UserType {
   site_admin: boolean | null;
   name: string | null;
   company: string | null;
-  blog: string | null;
+  blog: string;
   location: string | null;
   email: string | null;
   hireable: boolean | null;
   bio: string | null;
   twitter_username: string | null;
-  public_repos: number | null;
-  public_gists: number | null;
-  followers: number | null;
-  following: number | null;
-  created_at: string | null;
-  updated_at: string | null;
+  public_repos: number;
+  public_gists: number;
+  followers: number;
+  following: number;
+  created_at: string;
+  updated_at: string;
 }

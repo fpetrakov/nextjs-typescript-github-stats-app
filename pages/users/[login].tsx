@@ -3,7 +3,7 @@ import { UserType } from "../../types";
 import { GetServerSideProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import styles from "../../styles/modules/UserPage.module.css";
-import { Header } from "../../components";
+import { Container, Header, UserCard } from "../../components";
 
 interface Params extends ParsedUrlQuery {
   login: string;
@@ -36,7 +36,11 @@ const UserPage: FC<Props> = ({ user }) => {
   return (
     <>
       <Header />
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+        <Container mw={400}>
+          <UserCard user={user} />
+        </Container>
+      </main>
     </>
   );
 };

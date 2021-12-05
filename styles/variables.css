@@ -11,4 +11,10 @@
 
   /* border-radius */
   --br: 0.5rem;
+
+  /* box-shadow */
+  --bs: 4px 4px 0px 0px var(--clr-black);
+
+  /* transition */
+  --tr: all 200ms ease-out;
 }

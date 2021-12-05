@@ -1,0 +1,32 @@
+.card {
+  border: var(--border);
+  border-radius: var(--br);
+  padding: 2rem;
+  background-color: var(--clr-white);
+  box-shadow: var(--bs);
+}
+
+.avatar {
+  border-radius: 50%;
+  outline-offset: -0.2rem;
+  outline: var(--border);
+  width: 15rem;
+}
+
+.name {
+  font-size: 3.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.login {
+  display: inline-block;
+  margin-bottom: 1.4rem;
+}
+
+.table {
+  width: 100%;
+  border: var(--border);
+  border-radius: var(--br);
+  text-align: center;
+}
