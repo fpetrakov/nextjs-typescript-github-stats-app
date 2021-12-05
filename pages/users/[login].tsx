@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { useRouter } from "next/router";
 import { UserType } from "../../types";
 import { GetServerSideProps } from "next";
 import { ParsedUrlQuery } from "querystring";
@@ -31,7 +30,7 @@ interface Props {
   user: UserType;
 }
 
-const UserInfo: FC<Props> = ({ user }) => {
+const UserPage: FC<Props> = ({ user }) => {
   return (
     <div>
       <h1>User Page</h1>
@@ -46,4 +45,4 @@ const UserInfo: FC<Props> = ({ user }) => {
   );
 };
 
-export default UserInfo;
+export default UserPage;

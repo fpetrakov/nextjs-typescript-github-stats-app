@@ -1,9 +1,10 @@
 import Head from "next/head";
 import React, { FC, FormEvent, useState } from "react";
-import styles from "../styles/modules/Home.module.css";
+import styles from "../styles/modules/HomePage.module.css";
 import { useRouter } from "next/router";
+import { Container } from "../components";
 
-const Home: FC = () => {
+const HomePage: FC = () => {
   const router = useRouter();
 
   const [searchText, setSearchText] = useState("");
@@ -21,17 +22,23 @@ const Home: FC = () => {
   };
 
   return (
-    <>
-      <Head>
-        <title>Home</title>
-      </Head>
+    <Container>
+      <main className={styles.main}>
+        <Head>
+          <title>Home</title>
+        </Head>
 
-      <h1>Enter Github Username</h1>
-      <form onSubmit={handleFormSubmit}>
-        <input onChange={handleInputChange} value={searchText} />
-      </form>
-    </>
+        <h1 className={styles.heading}>Enter Github Username</h1>
+        <form onSubmit={handleFormSubmit}>
+          <input
+            onChange={handleInputChange}
+            value={searchText}
+            className={styles.input}
+          />
+        </form>
+      </main>
+    </Container>
   );
 };
 
-export default Home;
+export default HomePage;

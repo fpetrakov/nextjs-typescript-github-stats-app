@@ -1,4 +1,11 @@
 :root {
   /* colors */
-  --clr-green: green;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-gray-light: #e5e7eb;
+  --clr-gray: #374151;
+  --clr-gray-dark: #1f2937;
+
+  /* border-radius */
+  --br: 0.5rem;
 }
