@@ -1,11 +1,3 @@
-.card {
-  border: var(--border);
-  border-radius: var(--br);
-  padding: 2rem;
-  background-color: var(--clr-white);
-  box-shadow: var(--bs);
-}
-
 .avatar {
   border-radius: 50%;
   outline-offset: -0.2rem;

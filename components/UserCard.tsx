@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React, { FC } from "react";
+import { Box } from ".";
 import styles from "../styles/modules/UserCard.module.css";
-import { UserType } from "../types";
+import { RepoType, UserType } from "../types";
 
 interface Props {
   user: UserType;
@@ -9,7 +10,7 @@ interface Props {
 
 const UserCard: FC<Props> = ({ user }) => {
   return (
-    <div className={styles.card}>
+    <Box>
       <Image
         src={user.avatar_url}
         width={150}
@@ -33,7 +34,7 @@ const UserCard: FC<Props> = ({ user }) => {
           </tr>
         </tbody>
       </table>
-    </div>
+    </Box>
   );
 };
 

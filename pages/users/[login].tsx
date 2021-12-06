@@ -1,9 +1,10 @@
 import { FC } from "react";
-import { UserType } from "../../types";
+import { RepoType, UserType } from "../../types";
 import { GetServerSideProps } from "next";
+import Head from "next/head";
 import { ParsedUrlQuery } from "querystring";
 import styles from "../../styles/modules/UserPage.module.css";
-import { Container, Header, UserCard } from "../../components";
+import { Charts, Container, Header, UserCard } from "../../components";
 
 interface Params extends ParsedUrlQuery {
   login: string;
@@ -12,10 +13,13 @@ interface Params extends ParsedUrlQuery {
 export const getServerSideProps: GetServerSideProps = async context => {
   const { login } = context.params as Params;
 
-  const response = await fetch(`https://api.github.com/users/${login}`);
-  const data = await response.json();
+  const resUser = await fetch(`https://api.github.com/users/${login}`);
+  const dataUser = await resUser.json();
 
-  if (!data) {
+  const resRepos = await fetch(dataUser.repos_url);
+  const dataRepos = await resRepos.json();
+
+  if (!dataUser) {
     return {
       notFound: true,
     };
@@ -23,25 +27,33 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   return {
     props: {
-      user: data,
+      user: dataUser,
+      repos: dataRepos,
     },
   };
 };
 
 interface Props {
   user: UserType;
+  repos: Array<RepoType>;
 }
 
-const UserPage: FC<Props> = ({ user }) => {
+const UserPage: FC<Props> = ({ user, repos }) => {
   return (
-    <>
+    <div className={styles.page}>
+      <Head>
+        <title>{user.login}</title>
+      </Head>
       <Header />
       <main className={styles.main}>
         <Container mw={400}>
-          <UserCard user={user} />
+          <div className={styles.inner}>
+            <UserCard user={user} />
+            <Charts repos={repos} />
+          </div>
         </Container>
       </main>
-    </>
+    </div>
   );
 };
 

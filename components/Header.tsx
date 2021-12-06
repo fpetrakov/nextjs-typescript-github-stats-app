@@ -16,7 +16,9 @@ const Header: FC<Props> = () => {
               <Link href="/">Home</Link>
             </li>
             <li className={styles.li}>
-              <a href="https://github.com/fpetrakov">Github</a>
+              <a href="https://github.com/fpetrakov/nextjs-typescript-github-stats-app">
+                Github
+              </a>
             </li>
           </ul>
         </div>

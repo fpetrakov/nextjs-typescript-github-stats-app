@@ -1,7 +1,6 @@
 .header {
   background-color: var(--clr-white);
   border-bottom: var(--border);
-  margin-bottom: 4rem;
 }
 
 .inner {
