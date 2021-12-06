@@ -1,0 +1,12 @@
+.charts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .charts {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}

@@ -1,6 +1,7 @@
 import { FC } from "react";
-import { Box, TopLanguages } from ".";
+import { Box, MostStarred, TopLanguages } from ".";
 import { RepoType } from "../types";
+import styles from "../styles/modules/Charts.module.css";
 
 interface Props {
   repos: Array<RepoType>;
@@ -8,9 +9,10 @@ interface Props {
 
 const Charts: FC<Props> = ({ repos }) => {
   return (
-    <Box>
+    <div className={styles.charts}>
       <TopLanguages repos={repos} />
-    </Box>
+      <MostStarred repos={repos} />
+    </div>
   );
 };
 

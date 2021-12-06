@@ -1,11 +1,24 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 .inner {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .page {
+    gap: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .inner {
+    gap: 4rem;
+  }
 }
