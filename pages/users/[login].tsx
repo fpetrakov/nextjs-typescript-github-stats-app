@@ -16,10 +16,13 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const resUser = await fetch(`https://api.github.com/users/${login}`);
   const dataUser = await resUser.json();
 
-  const resRepos = await fetch(dataUser.repos_url);
-  const dataRepos = await resRepos.json();
+  let dataRepos;
+  if (dataUser.message !== "Not Found") {
+    const resRepos = await fetch(dataUser.repos_url);
+    dataRepos = await resRepos.json();
+  }
 
-  if (!dataUser) {
+  if (!dataUser || dataUser.message === "Not Found") {
     return {
       notFound: true,
     };
